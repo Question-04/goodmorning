@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Good Morning, Navya</title>
+    <meta name="description" content="A very special good morning, made just for you." />
+    <meta name="theme-color" content="#FFD1B3" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Great+Vibes&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="world" data-step="sun">
+      <div class="sky"></div>
+      <div class="sparkles" aria-hidden="true"></div>
+      <div class="hearts" aria-hidden="true"></div>
+
+      <button class="sun-wrap is-focus" type="button" title="Wake the morning sun" aria-label="Tap the sleepy sun to wake this morning">
+        <span class="tap-cue" aria-hidden="true">
+          <span class="tap-pill">tap here</span>
+          <span class="tap-arrow"></span>
+        </span>
+        <svg class="sun" viewBox="0 0 220 220" aria-hidden="true">
+          <defs>
+            <radialGradient id="sunCore" cx="50%" cy="42%" r="58%">
+              <stop offset="0%" stop-color="#FFF4A3" />
+              <stop offset="55%" stop-color="#FFD166" />
+              <stop offset="100%" stop-color="#FF9F43" />
+            </radialGradient>
+            <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#FFE566" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#FF9F43" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+          <circle cx="110" cy="110" r="108" fill="url(#sunGlow)" />
+          <g class="rays">
+            <ellipse cx="110" cy="18" rx="7" ry="16" fill="#FFD56A" />
+            <ellipse cx="110" cy="202" rx="7" ry="16" fill="#FFD56A" />
+            <ellipse cx="18" cy="110" rx="16" ry="7" fill="#FFD56A" />
+            <ellipse cx="202" cy="110" rx="16" ry="7" fill="#FFD56A" />
+            <ellipse cx="42" cy="42" rx="7" ry="15" fill="#FFC857" transform="rotate(-45 42 42)" />
+            <ellipse cx="178" cy="178" rx="7" ry="15" fill="#FFC857" transform="rotate(-45 178 178)" />
+            <ellipse cx="178" cy="42" rx="7" ry="15" fill="#FFC857" transform="rotate(45 178 42)" />
+            <ellipse cx="42" cy="178" rx="7" ry="15" fill="#FFC857" transform="rotate(45 42 178)" />
+          </g>
+          <circle cx="110" cy="110" r="58" fill="url(#sunCore)" />
+          <ellipse class="cheek" cx="86" cy="118" rx="11" ry="7" fill="#FF8A80" opacity="0.55" />
+          <ellipse class="cheek" cx="134" cy="118" rx="11" ry="7" fill="#FF8A80" opacity="0.55" />
+          <path class="eye" d="M88 102 q12 14 24 0" fill="none" stroke="#7A4E2D" stroke-width="4.2" stroke-linecap="round" />
+          <path class="eye wink" d="M108 102 q12 14 24 0" fill="none" stroke="#7A4E2D" stroke-width="4.2" stroke-linecap="round" />
+          <path d="M96 132 q14 16 28 0" fill="none" stroke="#7A4E2D" stroke-width="4" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <div class="cloud cloud-one" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="cloud cloud-two" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="cloud cloud-three" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+
+      <svg class="hills" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true">
+        <path class="hill hill-back" d="M0 220 C180 140 320 260 520 170 C740 70 900 210 1120 130 C1260 80 1360 140 1440 110 L1440 420 L0 420 Z" />
+        <path class="hill hill-mid" d="M0 280 C220 190 380 300 620 230 C860 150 1020 280 1220 210 C1340 170 1400 220 1440 200 L1440 420 L0 420 Z" />
+        <path class="hill hill-front" d="M0 340 C240 280 420 360 680 300 C940 240 1140 330 1440 280 L1440 420 L0 420 Z" />
+      </svg>
+
+      <div class="meadow" aria-hidden="true">
+        <button class="bloom b1" type="button" aria-label="Bloom a flower"></button>
+        <button class="bloom b2" type="button" aria-label="Bloom a flower"></button>
+        <button class="bloom b3" type="button" aria-label="Bloom a flower"></button>
+        <button class="bloom b4" type="button" aria-label="Bloom a flower"></button>
+        <button class="bloom b5" type="button" aria-label="Bloom a flower"></button>
+        <button class="bloom b6" type="button" aria-label="Bloom a flower"></button>
+      </div>
+
+      <button class="character" type="button" aria-label="Tap him, he has been waiting for you">
+        <span class="tap-cue" aria-hidden="true">
+          <span class="tap-pill">tap him</span>
+          <span class="tap-arrow"></span>
+        </span>
+        <span class="speech" hidden>good morning, my beautiful</span>
+        <svg viewBox="0 0 240 340" class="boy">
+          <ellipse cx="120" cy="322" rx="52" ry="10" fill="#c48b78" opacity="0.28" />
+
+          <g class="arm arm-back">
+            <path d="M82 180 C56 172 46 154 44 136" fill="none" stroke="#E8B48C" stroke-width="16" stroke-linecap="round" />
+            <circle cx="42" cy="130" r="11" fill="#E8B48C" />
+          </g>
+
+          <path d="M108 150 C108 142 112 138 120 138 C128 138 132 142 132 150 L136 188 C136 210 152 236 120 242 C88 236 104 210 104 188 Z" fill="#E8B48C" />
+
+          <path d="M84 172 C92 158 104 154 120 154 C136 154 148 158 156 172 C170 196 168 252 120 262 C72 252 70 196 84 172Z" fill="#7EB6E9" />
+          <path d="M100 168 C110 178 130 178 140 168 C146 186 142 206 120 212 C98 206 94 186 100 168Z" fill="#9FD0F5" />
+          <path d="M112 208 l8 10 8 -10 q-8 6 -16 0" fill="#FF8FAB" />
+
+          <path d="M102 252 C96 280 106 302 110 314" fill="none" stroke="#5C7EA3" stroke-width="18" stroke-linecap="round" />
+          <path d="M138 252 C144 280 134 302 130 314" fill="none" stroke="#5C7EA3" stroke-width="18" stroke-linecap="round" />
+          <ellipse cx="108" cy="318" rx="13" ry="7" fill="#C4A484" />
+          <ellipse cx="132" cy="318" rx="13" ry="7" fill="#C4A484" />
+
+          <g class="arm arm-wave">
+            <path d="M156 178 C186 164 198 132 186 100" fill="none" stroke="#E8B48C" stroke-width="16" stroke-linecap="round" />
+            <circle cx="184" cy="94" r="12" fill="#E8B48C" />
+            <g class="gift-flower">
+              <circle cx="198" cy="78" r="6" fill="#FF8FAB" />
+              <circle cx="208" cy="84" r="6" fill="#FFB3C6" />
+              <circle cx="202" cy="92" r="6" fill="#FF8FAB" />
+              <circle cx="192" cy="88" r="6" fill="#FFB3C6" />
+              <circle cx="200" cy="85" r="3.6" fill="#FFE566" />
+            </g>
+          </g>
+
+          <circle cx="120" cy="102" r="56" fill="#F0C4A0" />
+          <path d="M62 108 C58 58 86 28 120 28 C154 28 182 58 178 108 C170 78 150 68 120 66 C90 68 70 78 62 108Z" fill="#3F2918" />
+          <path d="M70 96 C76 62 102 54 120 56 C138 54 164 62 170 96 C156 78 140 90 120 74 C100 90 84 78 70 96Z" fill="#3F2918" />
+          <path d="M116 34 C122 16 138 22 130 42" fill="#3F2918" />
+          <path d="M96 44 C104 30 122 28 128 42" fill="none" stroke="#6B4226" stroke-width="4" stroke-linecap="round" opacity="0.3" />
+
+          <ellipse cx="68" cy="112" rx="10" ry="14" fill="#F0C4A0" />
+          <ellipse cx="172" cy="112" rx="10" ry="14" fill="#F0C4A0" />
+
+          <g class="face">
+            <ellipse cx="100" cy="112" rx="11" ry="8" fill="#fff" />
+            <ellipse cx="140" cy="112" rx="11" ry="8" fill="#fff" />
+            <ellipse cx="102" cy="113" rx="7" ry="7" fill="#4A2E1A" />
+            <ellipse cx="142" cy="113" rx="7" ry="7" fill="#4A2E1A" />
+            <circle cx="104" cy="110" r="2.4" fill="#fff" />
+            <circle cx="144" cy="110" r="2.4" fill="#fff" />
+            <ellipse cx="90" cy="124" rx="10" ry="6" fill="#F48FB1" opacity="0.5" />
+            <ellipse cx="150" cy="124" rx="10" ry="6" fill="#F48FB1" opacity="0.5" />
+            <path d="M112 132 q8 9 16 0" fill="none" stroke="#C46B7A" stroke-width="3.2" stroke-linecap="round" />
+          </g>
+        </svg>
+      </button>
+
+      <button class="bunny" type="button" aria-label="Tap the little bunny">
+        <span class="tap-cue" aria-hidden="true">
+          <span class="tap-pill">tap bunny</span>
+          <span class="tap-arrow"></span>
+        </span>
+        <svg viewBox="0 0 90 110">
+          <ellipse cx="46" cy="102" rx="22" ry="6" fill="#c48b78" opacity="0.25" />
+          <ellipse cx="28" cy="28" rx="8" ry="22" fill="#fff8f4" />
+          <ellipse cx="28" cy="30" rx="3.5" ry="14" fill="#FFB3C6" />
+          <ellipse cx="50" cy="24" rx="8" ry="22" fill="#fff8f4" />
+          <ellipse cx="50" cy="26" rx="3.5" ry="14" fill="#FFB3C6" />
+          <ellipse cx="40" cy="64" rx="26" ry="28" fill="#fff8f4" />
+          <circle cx="32" cy="62" r="3.2" fill="#4A2E1A" />
+          <circle cx="50" cy="62" r="3.2" fill="#4A2E1A" />
+          <ellipse cx="26" cy="70" rx="6" ry="4" fill="#FFB3C6" opacity="0.7" />
+          <ellipse cx="56" cy="70" rx="6" ry="4" fill="#FFB3C6" opacity="0.7" />
+          <ellipse cx="41" cy="74" rx="4" ry="3" fill="#F48FB1" />
+          <path d="M41 77 q0 6 -6 8" fill="none" stroke="#E28CA0" stroke-width="1.6" stroke-linecap="round" />
+          <path d="M41 77 q0 6 6 8" fill="none" stroke="#E28CA0" stroke-width="1.6" stroke-linecap="round" />
+        </svg>
+      </button>
+
+      <main class="stage">
+        <div class="guide" role="status">
+          <div class="progress" aria-hidden="true">
+            <span class="heart-slot" data-slot="1"></span>
+            <span class="heart-slot" data-slot="2"></span>
+            <span class="heart-slot" data-slot="3"></span>
+          </div>
+          <p class="guide-text">psst... tap the sleepy sun</p>
+        </div>
+
+        <button class="envelope" type="button" hidden aria-expanded="false" aria-controls="morning-note">
+          <span class="sr-only">Open your morning note</span>
+          <span class="tap-cue" aria-hidden="true">
+            <span class="tap-pill">open me</span>
+            <span class="tap-arrow"></span>
+          </span>
+          <span class="mail">
+            <span class="mail-stamp">☀</span>
+            <span class="seal">♡</span>
+            <span class="mail-title">for my beautiful</span>
+            <span class="hint">tap to open your morning</span>
+          </span>
+        </button>
+
+        <article class="note" id="morning-note" hidden>
+          <p class="note-kicker">a little sunrise, just for you</p>
+          <h1>Good morning, <span>Navya</span></h1>
+          <p class="note-love">my beautiful</p>
+          <p class="note-body">
+            This life seems much more beautiful
+            <em>as I think of you daily.</em>
+          </p>
+          <p class="note-end">wishing you the softest, warmest morning</p>
+        </article>
+      </main>
+
+      <button class="tap-bar" type="button">
+        <span class="tap-bar-hand" aria-hidden="true">👆</span>
+        <span class="tap-bar-label">Tap the sleepy sun</span>
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
