@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Good Morning, Navya</title>
-    <meta name="description" content="A very special good morning, made just for you." />
-    <meta name="theme-color" content="#FFD1B3" />
+    <title>Good Night, Navya</title>
+    <meta name="description" content="A little night wish, made just for you." />
+    <meta name="theme-color" content="#1b1340" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,57 +16,47 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="world" data-step="sun">
+    <div class="world" data-step="moon">
       <div class="sky"></div>
-      <div class="sparkles" aria-hidden="true"></div>
+      <div class="stars" aria-hidden="true"></div>
       <div class="hearts" aria-hidden="true"></div>
 
-      <button class="sun-wrap is-focus" type="button" title="Wake the morning sun" aria-label="Tap the sleepy sun to wake this morning">
+      <button class="moon-wrap is-focus" type="button" aria-label="Tap the sleepy moon">
         <span class="tap-cue" aria-hidden="true">
           <span class="tap-pill">tap here</span>
           <span class="tap-arrow"></span>
         </span>
-        <svg class="sun" viewBox="0 0 220 220" aria-hidden="true">
+        <svg class="moon" viewBox="0 0 220 220" aria-hidden="true">
           <defs>
-            <radialGradient id="sunCore" cx="50%" cy="42%" r="58%">
-              <stop offset="0%" stop-color="#FFF4A3" />
-              <stop offset="55%" stop-color="#FFD166" />
-              <stop offset="100%" stop-color="#FF9F43" />
+            <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#E9D5FF" stop-opacity="0.55" />
+              <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
             </radialGradient>
-            <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#FFE566" stop-opacity="0.55" />
-              <stop offset="100%" stop-color="#FF9F43" stop-opacity="0" />
+            <radialGradient id="moonCore" cx="42%" cy="38%" r="62%">
+              <stop offset="0%" stop-color="#FFF8E7" />
+              <stop offset="55%" stop-color="#E8D5FF" />
+              <stop offset="100%" stop-color="#C4B5FD" />
             </radialGradient>
           </defs>
-          <circle cx="110" cy="110" r="108" fill="url(#sunGlow)" />
-          <g class="rays">
-            <ellipse cx="110" cy="18" rx="7" ry="16" fill="#FFD56A" />
-            <ellipse cx="110" cy="202" rx="7" ry="16" fill="#FFD56A" />
-            <ellipse cx="18" cy="110" rx="16" ry="7" fill="#FFD56A" />
-            <ellipse cx="202" cy="110" rx="16" ry="7" fill="#FFD56A" />
-            <ellipse cx="42" cy="42" rx="7" ry="15" fill="#FFC857" transform="rotate(-45 42 42)" />
-            <ellipse cx="178" cy="178" rx="7" ry="15" fill="#FFC857" transform="rotate(-45 178 178)" />
-            <ellipse cx="178" cy="42" rx="7" ry="15" fill="#FFC857" transform="rotate(45 178 42)" />
-            <ellipse cx="42" cy="178" rx="7" ry="15" fill="#FFC857" transform="rotate(45 42 178)" />
-          </g>
-          <circle cx="110" cy="110" r="58" fill="url(#sunCore)" />
-          <ellipse class="cheek" cx="86" cy="118" rx="11" ry="7" fill="#FF8A80" opacity="0.55" />
-          <ellipse class="cheek" cx="134" cy="118" rx="11" ry="7" fill="#FF8A80" opacity="0.55" />
-          <path class="eye" d="M88 102 q12 14 24 0" fill="none" stroke="#7A4E2D" stroke-width="4.2" stroke-linecap="round" />
-          <path class="eye wink" d="M108 102 q12 14 24 0" fill="none" stroke="#7A4E2D" stroke-width="4.2" stroke-linecap="round" />
-          <path d="M96 132 q14 16 28 0" fill="none" stroke="#7A4E2D" stroke-width="4" stroke-linecap="round" />
+          <circle cx="110" cy="110" r="108" fill="url(#moonGlow)" />
+          <circle cx="110" cy="110" r="62" fill="url(#moonCore)" />
+          <circle cx="86" cy="96" r="7" fill="#D8C4F0" opacity="0.55" />
+          <circle cx="138" cy="128" r="11" fill="#D8C4F0" opacity="0.4" />
+          <circle cx="124" cy="84" r="5" fill="#D8C4F0" opacity="0.45" />
+          <ellipse class="cheek" cx="86" cy="120" rx="11" ry="7" fill="#E8B4C8" opacity="0.6" />
+          <ellipse class="cheek" cx="134" cy="120" rx="11" ry="7" fill="#E8B4C8" opacity="0.6" />
+          <path class="eye" d="M88 104 q12 12 24 0" fill="none" stroke="#5C4A7A" stroke-width="4.2" stroke-linecap="round" />
+          <path class="eye wink" d="M108 104 q12 12 24 0" fill="none" stroke="#5C4A7A" stroke-width="4.2" stroke-linecap="round" />
+          <path d="M96 134 q14 14 28 0" fill="none" stroke="#5C4A7A" stroke-width="4" stroke-linecap="round" />
         </svg>
       </button>
 
-      <div class="cloud cloud-one" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="cloud cloud-two" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="cloud cloud-three" aria-hidden="true">
-        <span></span><span></span><span></span>
-      </div>
+      <button class="firefly f1" type="button" aria-label="Catch a firefly"></button>
+      <button class="firefly f2" type="button" aria-label="Catch a firefly"></button>
+      <button class="firefly f3" type="button" aria-label="Catch a firefly"></button>
+      <button class="firefly f4" type="button" aria-label="Catch a firefly"></button>
+      <button class="firefly f5" type="button" aria-label="Catch a firefly"></button>
+      <button class="firefly f6" type="button" aria-label="Catch a firefly"></button>
 
       <svg class="hills" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true">
         <path class="hill hill-back" d="M0 220 C180 140 320 260 520 170 C740 70 900 210 1120 130 C1260 80 1360 140 1440 110 L1440 420 L0 420 Z" />
@@ -74,136 +64,124 @@
         <path class="hill hill-front" d="M0 340 C240 280 420 360 680 300 C940 240 1140 330 1440 280 L1440 420 L0 420 Z" />
       </svg>
 
-      <div class="meadow" aria-hidden="true">
-        <button class="bloom b1" type="button" aria-label="Bloom a flower"></button>
-        <button class="bloom b2" type="button" aria-label="Bloom a flower"></button>
-        <button class="bloom b3" type="button" aria-label="Bloom a flower"></button>
-        <button class="bloom b4" type="button" aria-label="Bloom a flower"></button>
-        <button class="bloom b5" type="button" aria-label="Bloom a flower"></button>
-        <button class="bloom b6" type="button" aria-label="Bloom a flower"></button>
-      </div>
-
-      <button class="character" type="button" aria-label="Tap him, he has been waiting for you">
+      <button class="orchid-bed" type="button" aria-label="Bloom the blue orchids">
         <span class="tap-cue" aria-hidden="true">
-          <span class="tap-pill">tap him</span>
+          <span class="tap-pill">bloom</span>
           <span class="tap-arrow"></span>
         </span>
-        <span class="speech" hidden>good morning, my beautiful</span>
-        <svg viewBox="0 0 240 340" class="boy">
-          <ellipse cx="120" cy="322" rx="52" ry="10" fill="#c48b78" opacity="0.28" />
-
-          <g class="arm arm-back">
-            <path d="M82 180 C56 172 46 154 44 136" fill="none" stroke="#E8B48C" stroke-width="16" stroke-linecap="round" />
-            <circle cx="42" cy="130" r="11" fill="#E8B48C" />
+        <svg class="orchids" viewBox="0 0 280 200">
+          <g class="orchid o-left">
+            <path d="M78 190 C74 140 82 100 78 58" fill="none" stroke="#3F6B5C" stroke-width="4" stroke-linecap="round" />
+            <ellipse cx="78" cy="52" rx="11" ry="26" fill="#7B8CDE" transform="rotate(-18 78 52)" />
+            <ellipse cx="78" cy="52" rx="11" ry="26" fill="#9AA8F0" transform="rotate(18 78 52)" />
+            <ellipse cx="56" cy="64" rx="18" ry="11" fill="#6B7FD7" />
+            <ellipse cx="100" cy="64" rx="18" ry="11" fill="#6B7FD7" />
+            <path d="M78 62 C68 68 62 88 78 94 C94 88 88 68 78 62Z" fill="#C4B5FD" />
+            <circle cx="78" cy="66" r="5" fill="#FDE68A" />
           </g>
-
-          <path d="M108 150 C108 142 112 138 120 138 C128 138 132 142 132 150 L136 188 C136 210 152 236 120 242 C88 236 104 210 104 188 Z" fill="#E8B48C" />
-
-          <path d="M84 172 C92 158 104 154 120 154 C136 154 148 158 156 172 C170 196 168 252 120 262 C72 252 70 196 84 172Z" fill="#7EB6E9" />
-          <path d="M100 168 C110 178 130 178 140 168 C146 186 142 206 120 212 C98 206 94 186 100 168Z" fill="#9FD0F5" />
-          <path d="M112 208 l8 10 8 -10 q-8 6 -16 0" fill="#FF8FAB" />
-
-          <path d="M102 252 C96 280 106 302 110 314" fill="none" stroke="#5C7EA3" stroke-width="18" stroke-linecap="round" />
-          <path d="M138 252 C144 280 134 302 130 314" fill="none" stroke="#5C7EA3" stroke-width="18" stroke-linecap="round" />
-          <ellipse cx="108" cy="318" rx="13" ry="7" fill="#C4A484" />
-          <ellipse cx="132" cy="318" rx="13" ry="7" fill="#C4A484" />
-
-          <g class="arm arm-wave">
-            <path d="M156 178 C186 164 198 132 186 100" fill="none" stroke="#E8B48C" stroke-width="16" stroke-linecap="round" />
-            <circle cx="184" cy="94" r="12" fill="#E8B48C" />
-            <g class="gift-flower">
-              <circle cx="198" cy="78" r="6" fill="#FF8FAB" />
-              <circle cx="208" cy="84" r="6" fill="#FFB3C6" />
-              <circle cx="202" cy="92" r="6" fill="#FF8FAB" />
-              <circle cx="192" cy="88" r="6" fill="#FFB3C6" />
-              <circle cx="200" cy="85" r="3.6" fill="#FFE566" />
-            </g>
+          <g class="orchid o-mid">
+            <path d="M148 198 C150 150 142 108 148 48" fill="none" stroke="#3F6B5C" stroke-width="4.5" stroke-linecap="round" />
+            <ellipse cx="148" cy="42" rx="13" ry="30" fill="#8B9AE8" transform="rotate(-12 148 42)" />
+            <ellipse cx="148" cy="42" rx="13" ry="30" fill="#A5B4FC" transform="rotate(14 148 42)" />
+            <ellipse cx="122" cy="56" rx="22" ry="13" fill="#6366F1" />
+            <ellipse cx="174" cy="56" rx="22" ry="13" fill="#6366F1" />
+            <path d="M148 52 C134 60 126 86 148 94 C170 86 162 60 148 52Z" fill="#DDD6FE" />
+            <circle cx="148" cy="58" r="6" fill="#FDE68A" />
           </g>
-
-          <circle cx="120" cy="102" r="56" fill="#F0C4A0" />
-          <path d="M62 108 C58 58 86 28 120 28 C154 28 182 58 178 108 C170 78 150 68 120 66 C90 68 70 78 62 108Z" fill="#3F2918" />
-          <path d="M70 96 C76 62 102 54 120 56 C138 54 164 62 170 96 C156 78 140 90 120 74 C100 90 84 78 70 96Z" fill="#3F2918" />
-          <path d="M116 34 C122 16 138 22 130 42" fill="#3F2918" />
-          <path d="M96 44 C104 30 122 28 128 42" fill="none" stroke="#6B4226" stroke-width="4" stroke-linecap="round" opacity="0.3" />
-
-          <ellipse cx="68" cy="112" rx="10" ry="14" fill="#F0C4A0" />
-          <ellipse cx="172" cy="112" rx="10" ry="14" fill="#F0C4A0" />
-
-          <g class="face">
-            <ellipse cx="100" cy="112" rx="11" ry="8" fill="#fff" />
-            <ellipse cx="140" cy="112" rx="11" ry="8" fill="#fff" />
-            <ellipse cx="102" cy="113" rx="7" ry="7" fill="#4A2E1A" />
-            <ellipse cx="142" cy="113" rx="7" ry="7" fill="#4A2E1A" />
-            <circle cx="104" cy="110" r="2.4" fill="#fff" />
-            <circle cx="144" cy="110" r="2.4" fill="#fff" />
-            <ellipse cx="90" cy="124" rx="10" ry="6" fill="#F48FB1" opacity="0.5" />
-            <ellipse cx="150" cy="124" rx="10" ry="6" fill="#F48FB1" opacity="0.5" />
-            <path d="M112 132 q8 9 16 0" fill="none" stroke="#C46B7A" stroke-width="3.2" stroke-linecap="round" />
+          <g class="orchid o-right">
+            <path d="M214 188 C218 142 208 104 216 62" fill="none" stroke="#3F6B5C" stroke-width="4" stroke-linecap="round" />
+            <ellipse cx="216" cy="56" rx="10" ry="24" fill="#7C8FE8" transform="rotate(-22 216 56)" />
+            <ellipse cx="216" cy="56" rx="10" ry="24" fill="#93A4F5" transform="rotate(16 216 56)" />
+            <ellipse cx="196" cy="68" rx="16" ry="10" fill="#818CF8" />
+            <ellipse cx="236" cy="68" rx="16" ry="10" fill="#818CF8" />
+            <path d="M216 66 C208 72 202 88 216 94 C230 88 224 72 216 66Z" fill="#C4B5FD" />
+            <circle cx="216" cy="70" r="4.5" fill="#FDE68A" />
           </g>
         </svg>
       </button>
 
-      <button class="bunny" type="button" aria-label="Tap the little bunny">
+      <button class="kitten" type="button" aria-label="Tap the sleepy kitten">
         <span class="tap-cue" aria-hidden="true">
-          <span class="tap-pill">tap bunny</span>
+          <span class="tap-pill">tap kitty</span>
           <span class="tap-arrow"></span>
         </span>
-        <svg viewBox="0 0 90 110">
-          <ellipse cx="46" cy="102" rx="22" ry="6" fill="#c48b78" opacity="0.25" />
-          <ellipse cx="28" cy="28" rx="8" ry="22" fill="#fff8f4" />
-          <ellipse cx="28" cy="30" rx="3.5" ry="14" fill="#FFB3C6" />
-          <ellipse cx="50" cy="24" rx="8" ry="22" fill="#fff8f4" />
-          <ellipse cx="50" cy="26" rx="3.5" ry="14" fill="#FFB3C6" />
-          <ellipse cx="40" cy="64" rx="26" ry="28" fill="#fff8f4" />
-          <circle cx="32" cy="62" r="3.2" fill="#4A2E1A" />
-          <circle cx="50" cy="62" r="3.2" fill="#4A2E1A" />
-          <ellipse cx="26" cy="70" rx="6" ry="4" fill="#FFB3C6" opacity="0.7" />
-          <ellipse cx="56" cy="70" rx="6" ry="4" fill="#FFB3C6" opacity="0.7" />
-          <ellipse cx="41" cy="74" rx="4" ry="3" fill="#F48FB1" />
-          <path d="M41 77 q0 6 -6 8" fill="none" stroke="#E28CA0" stroke-width="1.6" stroke-linecap="round" />
-          <path d="M41 77 q0 6 6 8" fill="none" stroke="#E28CA0" stroke-width="1.6" stroke-linecap="round" />
+        <span class="speech" hidden>good night, cutie</span>
+        <svg viewBox="0 0 220 200" class="cat">
+          <ellipse cx="110" cy="186" rx="52" ry="10" fill="#120c28" opacity="0.35" />
+          <ellipse cx="110" cy="148" rx="70" ry="40" fill="#EDE6F7" />
+          <ellipse cx="58" cy="150" rx="16" ry="12" fill="#EDE6F7" />
+          <ellipse cx="162" cy="150" rx="16" ry="12" fill="#EDE6F7" />
+          <circle cx="110" cy="88" r="52" fill="#F4EFFB" />
+          <path d="M68 78 L58 28 L98 62 Z" fill="#F4EFFB" />
+          <path d="M66 70 L62 40 L88 62 Z" fill="#C4B5FD" />
+          <path d="M152 78 L162 28 L122 62 Z" fill="#F4EFFB" />
+          <path d="M154 70 L158 40 L132 62 Z" fill="#C4B5FD" />
+          <path class="eye" d="M84 90 q14 12 24 0" fill="none" stroke="#5C4A7A" stroke-width="4" stroke-linecap="round" />
+          <path class="eye" d="M112 90 q14 12 24 0" fill="none" stroke="#5C4A7A" stroke-width="4" stroke-linecap="round" />
+          <ellipse cx="80" cy="108" rx="10" ry="6" fill="#E8B4C8" opacity="0.65" />
+          <ellipse cx="140" cy="108" rx="10" ry="6" fill="#E8B4C8" opacity="0.65" />
+          <ellipse cx="110" cy="114" rx="6" ry="4.5" fill="#F5A3C0" />
+          <path d="M110 118 q0 8 -8 10" fill="none" stroke="#D48BA6" stroke-width="2" stroke-linecap="round" />
+          <path d="M110 118 q0 8 8 10" fill="none" stroke="#D48BA6" stroke-width="2" stroke-linecap="round" />
+          <path d="M70 112 H48 M72 118 H46 M148 112 H172 M146 118 H174" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" />
+          <g class="ear-orchid">
+            <ellipse cx="160" cy="36" rx="6" ry="14" fill="#818CF8" transform="rotate(-20 160 36)" />
+            <ellipse cx="168" cy="40" rx="6" ry="12" fill="#A5B4FC" />
+            <circle cx="164" cy="42" r="3" fill="#FDE68A" />
+          </g>
         </svg>
       </button>
 
       <main class="stage">
         <div class="guide" role="status">
+          <p class="wish-date"></p>
           <div class="progress" aria-hidden="true">
             <span class="heart-slot" data-slot="1"></span>
             <span class="heart-slot" data-slot="2"></span>
             <span class="heart-slot" data-slot="3"></span>
           </div>
-          <p class="guide-text">psst... tap the sleepy sun</p>
+          <p class="guide-text">psst... tap the sleepy moon</p>
         </div>
 
-        <button class="envelope" type="button" hidden aria-expanded="false" aria-controls="morning-note">
-          <span class="sr-only">Open your morning note</span>
-          <span class="tap-cue" aria-hidden="true">
-            <span class="tap-pill">open me</span>
-            <span class="tap-arrow"></span>
-          </span>
+        <button class="envelope" type="button" hidden aria-expanded="false" aria-controls="night-note">
+          <span class="sr-only">Open your night note</span>
           <span class="mail">
-            <span class="mail-stamp">☀</span>
-            <span class="seal">♡</span>
-            <span class="mail-title">for my beautiful</span>
-            <span class="hint">tap to open your morning</span>
+            <span class="mail-stamp">🌙</span>
+            <span class="seal-wrap">
+              <span class="tap-cue" aria-hidden="true">
+                <span class="tap-pill">tap the heart</span>
+                <span class="tap-arrow"></span>
+              </span>
+              <span class="seal">♡</span>
+            </span>
+            <span class="mail-title">for my cutie</span>
+            <span class="hint">tap the ♡ to open tonight</span>
           </span>
         </button>
 
-        <article class="note" id="morning-note" hidden>
-          <p class="note-kicker">a little sunrise, just for you</p>
-          <h1>Good morning, <span>Navya</span></h1>
-          <p class="note-love">my beautiful</p>
+        <article class="note" id="night-note" hidden>
+          <p class="note-kicker">tonight’s little wish</p>
+          <h1>Good night, <span>cutie</span></h1>
+          <p class="note-love">My Navya</p>
           <p class="note-body">
-            This life seems much more beautiful
-            <em>as I think of you daily.</em>
+            You have become so special to me that I still cannot fully say it — and yet I want to. I want to be special to you, too.
           </p>
-          <p class="note-end">wishing you the softest, warmest morning</p>
+          <p class="note-body">
+            You are the best thing that has happened to me. So all in all, <em>thank you, sweetie.</em>
+          </p>
+          <p class="note-body">
+            I hope like this we have our special days and special nigths together always. And in this journey of ours, may we understand, know, and love each other more.
+          </p>
+          <p class="note-quote">
+            Love, in my eyes, is the word we use when we express ourselves fully and truly — because expressing our heart is love.
+          </p>
+          <p class="note-end">Have a sweet sleep, my special girl</p>
         </article>
       </main>
 
       <button class="tap-bar" type="button">
         <span class="tap-bar-hand" aria-hidden="true">👆</span>
-        <span class="tap-bar-label">Tap the sleepy sun</span>
+        <span class="tap-bar-label">Tap the sleepy moon</span>
       </button>
     </div>
 

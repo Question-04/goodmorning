@@ -1,34 +1,41 @@
 const world = document.querySelector(".world");
-const sparkles = document.querySelector(".sparkles");
+const stars = document.querySelector(".stars");
 const hearts = document.querySelector(".hearts");
 const envelope = document.querySelector(".envelope");
 const note = document.querySelector(".note");
-const sun = document.querySelector(".sun-wrap");
-const character = document.querySelector(".character");
-const bunny = document.querySelector(".bunny");
+const moon = document.querySelector(".moon-wrap");
+const kitten = document.querySelector(".kitten");
+const orchidBed = document.querySelector(".orchid-bed");
 const speech = document.querySelector(".speech");
 const guide = document.querySelector(".guide");
 const guideText = document.querySelector(".guide-text");
+const wishDate = document.querySelector(".wish-date");
 const tapBar = document.querySelector(".tap-bar");
 const tapBarLabel = document.querySelector(".tap-bar-label");
 const heartSlots = [...document.querySelectorAll(".heart-slot")];
 
 const prompts = {
-  sun: "psst... tap the sleepy sun",
-  boy: "he's been waiting for you — tap him",
-  bunny: "the little bunny is hiding something",
-  letter: "this morning is for you",
+  moon: "psst... tap the sleepy moon",
+  kitten: "the little kitten has a secret",
+  orchid: "the blue orchids want to bloom",
+  letter: "now tap the ♡ on the letter",
 };
 
 const barLabels = {
-  sun: "Tap the sleepy sun",
-  boy: "Tap him",
-  bunny: "Tap the little bunny",
-  letter: "Open your morning",
+  moon: "Tap the sleepy moon",
+  kitten: "Tap the sleepy kitten",
+  orchid: "Bloom the orchids",
+  letter: "Tap the heart",
 };
 
-let step = "sun";
+let step = "moon";
 let audioCtx;
+
+wishDate.textContent = new Date().toLocaleDateString("en-IN", {
+  weekday: "long",
+  day: "numeric",
+  month: "long",
+});
 
 function pointFrom(event, el) {
   if (event && event.clientX && event.clientY) {
@@ -41,41 +48,47 @@ function pointFrom(event, el) {
 function chime(kind = "soft") {
   try {
     audioCtx = audioCtx || new (window.AudioContext || window.webkitAudioContext)();
-    const notes = kind === "open" ? [523.25, 659.25, 783.99, 1046.5] : [659.25, 783.99, 987.77];
+    const notes = kind === "open" ? [392, 523.25, 659.25, 783.99] : [523.25, 659.25, 783.99];
     notes.forEach((freq, i) => {
       const osc = audioCtx.createOscillator();
       const gain = audioCtx.createGain();
       osc.type = "sine";
       osc.frequency.value = freq;
-      const start = audioCtx.currentTime + i * 0.07;
+      const start = audioCtx.currentTime + i * 0.08;
       gain.gain.setValueAtTime(0.0001, start);
-      gain.gain.exponentialRampToValueAtTime(0.06, start + 0.03);
-      gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.42);
+      gain.gain.exponentialRampToValueAtTime(0.05, start + 0.03);
+      gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.5);
       osc.connect(gain).connect(audioCtx.destination);
       osc.start(start);
-      osc.stop(start + 0.45);
+      osc.stop(start + 0.52);
     });
   } catch (err) {
-    // Audio is a sweet extra; keep going if the browser blocks it.
+    // Keep the night quiet if audio is blocked.
   }
 }
 
-function scatterSparkles() {
-  const count = window.innerWidth < 700 ? 10 : 22;
-  sparkles.innerHTML = "";
+function scatterStars() {
+  const count = window.innerWidth < 700 ? 18 : 32;
+  stars.innerHTML = "";
   for (let i = 0; i < count; i += 1) {
-    const star = document.createElement("span");
-    star.className = "sparkle";
+    const star = document.createElement("button");
+    star.type = "button";
+    star.className = "star-dot";
+    star.setAttribute("aria-label", "Light a star");
     star.style.left = `${Math.random() * 100}%`;
-    star.style.top = `${Math.random() * 45}%`;
+    star.style.top = `${Math.random() * 52}%`;
     star.style.animationDelay = `${Math.random() * 2.8}s`;
-    star.style.transform = `scale(${0.5 + Math.random()})`;
-    sparkles.appendChild(star);
+    star.addEventListener("click", (event) => {
+      event.stopPropagation();
+      star.classList.add("lit");
+      burstHearts(event.clientX, event.clientY, ["✦"]);
+    });
+    stars.appendChild(star);
   }
 }
 
 function burstHearts(x, y, extra = []) {
-  const glyphs = ["♡", "♥", "🌸", "✨", ...extra];
+  const glyphs = ["♡", "♥", "🌙", "✨", ...extra];
   for (let i = 0; i < 10; i += 1) {
     const bit = document.createElement("span");
     bit.className = "heart-bit";
@@ -89,7 +102,7 @@ function burstHearts(x, y, extra = []) {
 }
 
 function setFocus(target) {
-  [sun, character, bunny].forEach((el) => el.classList.remove("is-focus"));
+  [moon, kitten, orchidBed].forEach((el) => el.classList.remove("is-focus"));
   if (target) target.classList.add("is-focus");
 }
 
@@ -106,61 +119,56 @@ function setStep(next) {
   if (barLabels[next]) tapBarLabel.textContent = barLabels[next];
 }
 
-function wakeSun(event) {
-  const point = pointFrom(event, sun);
-  if (step !== "sun") {
-    sun.classList.remove("wink");
-    void sun.offsetWidth;
-    sun.classList.add("wink");
-    burstHearts(point.x, point.y, ["☀"]);
+function wakeMoon(event) {
+  const point = pointFrom(event, moon);
+  if (step !== "moon") {
+    moon.classList.remove("wink");
+    void moon.offsetWidth;
+    moon.classList.add("wink");
+    burstHearts(point.x, point.y, ["🌙"]);
     return;
   }
   chime();
-  sun.classList.add("wink");
-  burstHearts(point.x, point.y, ["☀"]);
+  moon.classList.add("wink");
+  burstHearts(point.x, point.y, ["🌙"]);
   fillHearts(1);
-  setStep("boy");
-  setFocus(character);
+  setStep("kitten");
+  setFocus(kitten);
 }
 
-function greetBoy(event) {
-  const point = pointFrom(event, character);
-  if (step !== "boy") {
-    character.classList.add("extra-wave");
-    burstHearts(point.x, point.y);
-    window.setTimeout(() => character.classList.remove("extra-wave"), 1200);
+function greetKitten(event) {
+  const point = pointFrom(event, kitten);
+  kitten.classList.remove("purr");
+  void kitten.offsetWidth;
+  kitten.classList.add("purr");
+  if (step !== "kitten") {
+    burstHearts(point.x, point.y, ["🐱"]);
     return;
   }
   chime();
-  character.classList.add("extra-wave", "offered");
   speech.hidden = false;
-  burstHearts(point.x, point.y);
+  burstHearts(point.x, point.y, ["🐱"]);
   fillHearts(2);
-  setStep("bunny");
-  setFocus(bunny);
-  window.setTimeout(() => character.classList.remove("extra-wave"), 1400);
+  setStep("orchid");
+  setFocus(orchidBed);
 }
 
-function meetBunny(event) {
-  const point = pointFrom(event, bunny);
-  if (step !== "bunny") {
-    bunny.classList.remove("hop");
-    void bunny.offsetWidth;
-    bunny.classList.add("hop");
-    burstHearts(point.x, point.y, ["✿"]);
+function bloomOrchids(event) {
+  const point = pointFrom(event, orchidBed);
+  orchidBed.classList.add("bloomed");
+  if (step !== "orchid") {
+    burstHearts(point.x, point.y, ["❀"]);
     return;
   }
   chime("open");
-  bunny.classList.add("hop");
-  burstHearts(point.x, point.y, ["✿"]);
+  burstHearts(point.x, point.y, ["❀"]);
   fillHearts(3);
-  setFocus(null);
   setStep("letter");
-  guide.hidden = true;
+  setFocus(envelope);
   envelope.hidden = false;
 }
 
-function openMorning(event) {
+function openNight(event) {
   if (envelope.classList.contains("open")) return;
   const point = pointFrom(event, envelope);
   chime("open");
@@ -175,33 +183,34 @@ function openMorning(event) {
   }, 480);
 }
 
-function bloomFlower(button, event) {
-  button.classList.add("bloomed");
-  burstHearts(event.clientX, event.clientY, ["🌸"]);
-}
-
 function useTapBar(event) {
   event.stopPropagation();
-  if (step === "sun") wakeSun(event);
-  else if (step === "boy") greetBoy(event);
-  else if (step === "bunny") meetBunny(event);
-  else if (step === "letter") openMorning(event);
+  if (step === "moon") wakeMoon(event);
+  else if (step === "kitten") greetKitten(event);
+  else if (step === "orchid") bloomOrchids(event);
+  else if (step === "letter") openNight(event);
 }
 
-sun.addEventListener("click", wakeSun);
-character.addEventListener("click", greetBoy);
-bunny.addEventListener("click", meetBunny);
-envelope.addEventListener("click", openMorning);
+moon.addEventListener("click", wakeMoon);
+kitten.addEventListener("click", greetKitten);
+orchidBed.addEventListener("click", bloomOrchids);
+envelope.addEventListener("click", openNight);
 tapBar.addEventListener("click", useTapBar);
 
-document.querySelectorAll(".bloom").forEach((flower) => {
-  flower.addEventListener("click", (event) => bloomFlower(flower, event));
+document.querySelectorAll(".firefly").forEach((fly) => {
+  fly.addEventListener("click", (event) => {
+    event.stopPropagation();
+    fly.classList.add("caught");
+    burstHearts(event.clientX, event.clientY, ["✦"]);
+  });
 });
 
 document.body.addEventListener("click", (event) => {
-  if (event.target.closest(".sun-wrap, .character, .bunny, .envelope, .note, .bloom, .guide, .tap-bar")) return;
+  if (event.target.closest(".moon-wrap, .kitten, .orchid-bed, .envelope, .note, .firefly, .star-dot, .guide, .tap-bar")) {
+    return;
+  }
   burstHearts(event.clientX, event.clientY);
 });
 
-scatterSparkles();
-window.addEventListener("resize", scatterSparkles);
+scatterStars();
+window.addEventListener("resize", scatterStars);
