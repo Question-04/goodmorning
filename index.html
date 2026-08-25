@@ -3,188 +3,184 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Good Night, Navya</title>
-    <meta name="description" content="A little night wish, made just for you." />
-    <meta name="theme-color" content="#1b1340" />
+    <title>Rasmalai 🍮💗 — Good Morning</title>
+    <meta name="description" content="A soft morning corner for Rasmalai — made with care." />
+    <meta name="theme-color" content="#FFE4EC" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Rasmalai" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Great+Vibes&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,500&family=Quicksand:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="world" data-step="moon">
-      <div class="sky"></div>
-      <div class="stars" aria-hidden="true"></div>
-      <div class="hearts" aria-hidden="true"></div>
-
-      <button class="moon-wrap is-focus" type="button" aria-label="Tap the sleepy moon">
-        <span class="tap-cue" aria-hidden="true">
-          <span class="tap-pill">tap here</span>
-          <span class="tap-arrow"></span>
-        </span>
-        <svg class="moon" viewBox="0 0 220 220" aria-hidden="true">
-          <defs>
-            <radialGradient id="moonGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#E9D5FF" stop-opacity="0.55" />
-              <stop offset="100%" stop-color="#7C3AED" stop-opacity="0" />
-            </radialGradient>
-            <radialGradient id="moonCore" cx="42%" cy="38%" r="62%">
-              <stop offset="0%" stop-color="#FFF8E7" />
-              <stop offset="55%" stop-color="#E8D5FF" />
-              <stop offset="100%" stop-color="#C4B5FD" />
-            </radialGradient>
-          </defs>
-          <circle cx="110" cy="110" r="108" fill="url(#moonGlow)" />
-          <circle cx="110" cy="110" r="62" fill="url(#moonCore)" />
-          <circle cx="86" cy="96" r="7" fill="#D8C4F0" opacity="0.55" />
-          <circle cx="138" cy="128" r="11" fill="#D8C4F0" opacity="0.4" />
-          <circle cx="124" cy="84" r="5" fill="#D8C4F0" opacity="0.45" />
-          <ellipse class="cheek" cx="86" cy="120" rx="11" ry="7" fill="#E8B4C8" opacity="0.6" />
-          <ellipse class="cheek" cx="134" cy="120" rx="11" ry="7" fill="#E8B4C8" opacity="0.6" />
-          <path class="eye" d="M88 104 q12 12 24 0" fill="none" stroke="#5C4A7A" stroke-width="4.2" stroke-linecap="round" />
-          <path class="eye wink" d="M108 104 q12 12 24 0" fill="none" stroke="#5C4A7A" stroke-width="4.2" stroke-linecap="round" />
-          <path d="M96 134 q14 14 28 0" fill="none" stroke="#5C4A7A" stroke-width="4" stroke-linecap="round" />
-        </svg>
-      </button>
-
-      <button class="firefly f1" type="button" aria-label="Catch a firefly"></button>
-      <button class="firefly f2" type="button" aria-label="Catch a firefly"></button>
-      <button class="firefly f3" type="button" aria-label="Catch a firefly"></button>
-      <button class="firefly f4" type="button" aria-label="Catch a firefly"></button>
-      <button class="firefly f5" type="button" aria-label="Catch a firefly"></button>
-      <button class="firefly f6" type="button" aria-label="Catch a firefly"></button>
-
-      <svg class="hills" viewBox="0 0 1440 420" preserveAspectRatio="none" aria-hidden="true">
-        <path class="hill hill-back" d="M0 220 C180 140 320 260 520 170 C740 70 900 210 1120 130 C1260 80 1360 140 1440 110 L1440 420 L0 420 Z" />
-        <path class="hill hill-mid" d="M0 280 C220 190 380 300 620 230 C860 150 1020 280 1220 210 C1340 170 1400 220 1440 200 L1440 420 L0 420 Z" />
-        <path class="hill hill-front" d="M0 340 C240 280 420 360 680 300 C940 240 1140 330 1440 280 L1440 420 L0 420 Z" />
+    <div class="bg" aria-hidden="true">
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+      <div class="cloud c3"></div>
+      <div class="sparkles" id="sparkles"></div>
+      <div class="floaters" id="floaters"></div>
+      <svg class="tulip tulip-left" viewBox="0 0 80 140" aria-hidden="true">
+        <path d="M40 60 C38 90 36 120 40 138 C44 120 42 90 40 60Z" fill="#8BC34A" />
+        <ellipse cx="40" cy="42" rx="16" ry="28" fill="#FF8FAB" />
+        <ellipse cx="28" cy="48" rx="12" ry="22" fill="#FFB3C6" transform="rotate(-22 28 48)" />
+        <ellipse cx="52" cy="48" rx="12" ry="22" fill="#FFB3C6" transform="rotate(22 52 48)" />
+        <ellipse cx="40" cy="34" rx="8" ry="14" fill="#FF6B8A" />
       </svg>
-
-      <button class="orchid-bed" type="button" aria-label="Bloom the blue orchids">
-        <span class="tap-cue" aria-hidden="true">
-          <span class="tap-pill">bloom</span>
-          <span class="tap-arrow"></span>
-        </span>
-        <svg class="orchids" viewBox="0 0 280 200">
-          <g class="orchid o-left">
-            <path d="M78 190 C74 140 82 100 78 58" fill="none" stroke="#3F6B5C" stroke-width="4" stroke-linecap="round" />
-            <ellipse cx="78" cy="52" rx="11" ry="26" fill="#7B8CDE" transform="rotate(-18 78 52)" />
-            <ellipse cx="78" cy="52" rx="11" ry="26" fill="#9AA8F0" transform="rotate(18 78 52)" />
-            <ellipse cx="56" cy="64" rx="18" ry="11" fill="#6B7FD7" />
-            <ellipse cx="100" cy="64" rx="18" ry="11" fill="#6B7FD7" />
-            <path d="M78 62 C68 68 62 88 78 94 C94 88 88 68 78 62Z" fill="#C4B5FD" />
-            <circle cx="78" cy="66" r="5" fill="#FDE68A" />
-          </g>
-          <g class="orchid o-mid">
-            <path d="M148 198 C150 150 142 108 148 48" fill="none" stroke="#3F6B5C" stroke-width="4.5" stroke-linecap="round" />
-            <ellipse cx="148" cy="42" rx="13" ry="30" fill="#8B9AE8" transform="rotate(-12 148 42)" />
-            <ellipse cx="148" cy="42" rx="13" ry="30" fill="#A5B4FC" transform="rotate(14 148 42)" />
-            <ellipse cx="122" cy="56" rx="22" ry="13" fill="#6366F1" />
-            <ellipse cx="174" cy="56" rx="22" ry="13" fill="#6366F1" />
-            <path d="M148 52 C134 60 126 86 148 94 C170 86 162 60 148 52Z" fill="#DDD6FE" />
-            <circle cx="148" cy="58" r="6" fill="#FDE68A" />
-          </g>
-          <g class="orchid o-right">
-            <path d="M214 188 C218 142 208 104 216 62" fill="none" stroke="#3F6B5C" stroke-width="4" stroke-linecap="round" />
-            <ellipse cx="216" cy="56" rx="10" ry="24" fill="#7C8FE8" transform="rotate(-22 216 56)" />
-            <ellipse cx="216" cy="56" rx="10" ry="24" fill="#93A4F5" transform="rotate(16 216 56)" />
-            <ellipse cx="196" cy="68" rx="16" ry="10" fill="#818CF8" />
-            <ellipse cx="236" cy="68" rx="16" ry="10" fill="#818CF8" />
-            <path d="M216 66 C208 72 202 88 216 94 C230 88 224 72 216 66Z" fill="#C4B5FD" />
-            <circle cx="216" cy="70" r="4.5" fill="#FDE68A" />
-          </g>
-        </svg>
-      </button>
-
-      <button class="kitten" type="button" aria-label="Tap the sleepy kitten">
-        <span class="tap-cue" aria-hidden="true">
-          <span class="tap-pill">tap kitty</span>
-          <span class="tap-arrow"></span>
-        </span>
-        <span class="speech" hidden>good night, cutie</span>
-        <svg viewBox="0 0 220 200" class="cat">
-          <ellipse cx="110" cy="186" rx="52" ry="10" fill="#120c28" opacity="0.35" />
-          <ellipse cx="110" cy="148" rx="70" ry="40" fill="#EDE6F7" />
-          <ellipse cx="58" cy="150" rx="16" ry="12" fill="#EDE6F7" />
-          <ellipse cx="162" cy="150" rx="16" ry="12" fill="#EDE6F7" />
-          <circle cx="110" cy="88" r="52" fill="#F4EFFB" />
-          <path d="M68 78 L58 28 L98 62 Z" fill="#F4EFFB" />
-          <path d="M66 70 L62 40 L88 62 Z" fill="#C4B5FD" />
-          <path d="M152 78 L162 28 L122 62 Z" fill="#F4EFFB" />
-          <path d="M154 70 L158 40 L132 62 Z" fill="#C4B5FD" />
-          <path class="eye" d="M84 90 q14 12 24 0" fill="none" stroke="#5C4A7A" stroke-width="4" stroke-linecap="round" />
-          <path class="eye" d="M112 90 q14 12 24 0" fill="none" stroke="#5C4A7A" stroke-width="4" stroke-linecap="round" />
-          <ellipse cx="80" cy="108" rx="10" ry="6" fill="#E8B4C8" opacity="0.65" />
-          <ellipse cx="140" cy="108" rx="10" ry="6" fill="#E8B4C8" opacity="0.65" />
-          <ellipse cx="110" cy="114" rx="6" ry="4.5" fill="#F5A3C0" />
-          <path d="M110 118 q0 8 -8 10" fill="none" stroke="#D48BA6" stroke-width="2" stroke-linecap="round" />
-          <path d="M110 118 q0 8 8 10" fill="none" stroke="#D48BA6" stroke-width="2" stroke-linecap="round" />
-          <path d="M70 112 H48 M72 118 H46 M148 112 H172 M146 118 H174" stroke="#C4B5FD" stroke-width="1.8" stroke-linecap="round" />
-          <g class="ear-orchid">
-            <ellipse cx="160" cy="36" rx="6" ry="14" fill="#818CF8" transform="rotate(-20 160 36)" />
-            <ellipse cx="168" cy="40" rx="6" ry="12" fill="#A5B4FC" />
-            <circle cx="164" cy="42" r="3" fill="#FDE68A" />
-          </g>
-        </svg>
-      </button>
-
-      <main class="stage">
-        <div class="guide" role="status">
-          <p class="wish-date"></p>
-          <div class="progress" aria-hidden="true">
-            <span class="heart-slot" data-slot="1"></span>
-            <span class="heart-slot" data-slot="2"></span>
-            <span class="heart-slot" data-slot="3"></span>
-          </div>
-          <p class="guide-text">psst... tap the sleepy moon</p>
-        </div>
-
-        <button class="envelope" type="button" hidden aria-expanded="false" aria-controls="night-note">
-          <span class="sr-only">Open your night note</span>
-          <span class="mail">
-            <span class="mail-stamp">🌙</span>
-            <span class="seal-wrap">
-              <span class="tap-cue" aria-hidden="true">
-                <span class="tap-pill">tap the heart</span>
-                <span class="tap-arrow"></span>
-              </span>
-              <span class="seal">♡</span>
-            </span>
-            <span class="mail-title">for my cutie</span>
-            <span class="hint">tap the ♡ to open tonight</span>
-          </span>
-        </button>
-
-        <article class="note" id="night-note" hidden>
-          <p class="note-kicker">tonight’s little wish</p>
-          <h1>Good night, <span>cutie</span></h1>
-          <p class="note-love">My Navya</p>
-          <p class="note-body">
-            You have become so special to me that I still cannot fully say it — and yet I want to. I want to be special to you, too.
-          </p>
-          <p class="note-body">
-            You are the best thing that has happened to me. So all in all, <em>thank you, sweetie.</em>
-          </p>
-          <p class="note-body">
-            I hope like this we have our special days and special nigths together always. And in this journey of ours, may we understand, know, and love each other more.
-          </p>
-          <p class="note-quote">
-            Love, in my eyes, is the word we use when we express ourselves fully and truly — because expressing our heart is love.
-          </p>
-          <p class="note-end">Have a sweet sleep, my special girl</p>
-        </article>
-      </main>
-
-      <button class="tap-bar" type="button">
-        <span class="tap-bar-hand" aria-hidden="true">👆</span>
-        <span class="tap-bar-label">Tap the sleepy moon</span>
-      </button>
+      <svg class="tulip tulip-right" viewBox="0 0 80 140" aria-hidden="true">
+        <path d="M40 60 C38 90 36 120 40 138 C44 120 42 90 40 60Z" fill="#9CCC65" />
+        <ellipse cx="40" cy="42" rx="16" ry="28" fill="#F8BBD0" />
+        <ellipse cx="28" cy="48" rx="12" ry="22" fill="#FCE4EC" transform="rotate(-22 28 48)" />
+        <ellipse cx="52" cy="48" rx="12" ry="22" fill="#FCE4EC" transform="rotate(22 52 48)" />
+        <ellipse cx="40" cy="34" rx="8" ry="14" fill="#F48FB1" />
+      </svg>
     </div>
 
+    <header class="topbar">
+      <p class="app-name">🍮 Rasmalai 💗</p>
+      <button class="music-toggle" type="button" id="musicToggle" aria-pressed="false" title="Soft music on/off">
+        <span class="music-icon">🔇</span>
+        <span class="music-label">soft music</span>
+      </button>
+    </header>
+
+    <main class="app" id="app">
+      <section class="screen is-active" id="screen-welcome" data-screen="welcome">
+        <div class="card welcome-card">
+          <div class="tulip-row" aria-hidden="true">🌷 🎀 🍮 🌸</div>
+          <h1>Good Morninggg,<br /><span>Rasmalai</span> 🍮💗</h1>
+          <p class="lead">
+            Aaj ka page sirf ek chhote se reason ke liye hai…<br />
+            tumhari morning thodi aur beautiful banane ke liye. 🤍✨
+          </p>
+          <button class="btn primary" type="button" data-next="checkin">
+            ☀️ Tap when you wake up
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-checkin" data-screen="checkin" hidden>
+        <div class="card">
+          <h2>First things first… how's my Rasmalai feeling today? 🥺💗</h2>
+          <div class="choice-grid" id="feelingChoices">
+            <button class="choice" type="button" data-reply="Okayyy… then today's only rule is: be gentle with yourself. No rushing. 🤍">
+              🥰 Much better
+            </button>
+            <button class="choice" type="button" data-reply="Then take it slow, Rasmalai. Soft blankets, soft plans, soft everything today. ☁️🍮">
+              😴 Still sleepy
+            </button>
+            <button class="choice" type="button" data-reply="That's okay. Heavy minds need soft mornings — not pressure. I'm right here with you. 💗">
+              🫠 Mind still feels heavy
+            </button>
+            <button class="choice" type="button" data-reply="Thank you for being honest. You don't have to be okay for anyone today. Just rest. 🥺🤍">
+              🥺 Not feeling my best
+            </button>
+            <button class="choice" type="button" data-reply="Then rest is the plan. No guilt. No to-do list winning over you. 🫶🏻">
+              ❤️ I just need some rest
+            </button>
+          </div>
+          <p class="soft-reply" id="feelingReply" hidden></p>
+          <button class="btn primary" type="button" data-next="health" id="toHealth" hidden>
+            Continue gently →
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-health" data-screen="health" hidden>
+        <div class="card">
+          <h2>🌸 A tiny check-in from someone who cares about you</h2>
+          <div class="health-grid" id="healthCards">
+            <button class="health-card" type="button" data-msg="Yesss… water is love. Sip slowly 💧🤍">
+              <span class="hc-emoji">💧</span>
+              <span class="hc-text">Had some water yet?</span>
+              <span class="hc-check" aria-hidden="true">✓</span>
+            </button>
+            <button class="health-card" type="button" data-msg="Even a little bite counts. Be kind to your tummy 🍪💗">
+              <span class="hc-emoji">🍪</span>
+              <span class="hc-text">Have you eaten something?</span>
+              <span class="hc-check" aria-hidden="true">✓</span>
+            </button>
+            <button class="health-card" type="button" data-msg="Rest is productive too. Your body knows 😴🌷">
+              <span class="hc-emoji">😴</span>
+              <span class="hc-text">Did you get enough rest?</span>
+              <span class="hc-check" aria-hidden="true">✓</span>
+            </button>
+            <button class="health-card" type="button" data-msg="Lighter or not — progress isn't a straight line. Soft day ahead 🧘‍♀️🤍">
+              <span class="hc-emoji">🧘‍♀️</span>
+              <span class="hc-text">Is your mind feeling a little lighter?</span>
+              <span class="hc-check" aria-hidden="true">✓</span>
+            </button>
+            <button class="health-card" type="button" data-msg="Taking it easy is the bravest thing today 🌷🫶🏻">
+              <span class="hc-emoji">🌷</span>
+              <span class="hc-text">Are you taking it easy today?</span>
+              <span class="hc-check" aria-hidden="true">✓</span>
+            </button>
+          </div>
+          <p class="nudge" id="healthNudge" hidden></p>
+          <p class="footer-note">
+            You don't have to answer all of these…<br />
+            I just want you to remember to take care of yourself. 🫶🏻
+          </p>
+          <button class="btn primary" type="button" data-next="letter">
+            A little note →
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-letter" data-screen="letter" hidden>
+        <div class="letter-wrap">
+          <div class="letter-hearts" aria-hidden="true"></div>
+          <article class="letter-card">
+            <p class="letter-kicker">💌 A little note for Rasmalai 🍮</p>
+            <div class="letter-body">
+              <p>
+                I know I can't magically make everything feel better, but I hope this little corner of the internet reminds you that someone is thinking about you this morning. 🥺💗
+              </p>
+              <p>
+                So don't worry about replying quickly, don't worry about being productive, and don't feel like you have to be okay for everyone.
+              </p>
+              <p>Just take care of yourself today.</p>
+              <p class="letter-end">I'll be happy knowing you're taking it easy. 🤍✨</p>
+            </div>
+          </article>
+          <button class="btn primary" type="button" data-next="surprise">
+            💗 One last thing…
+          </button>
+        </div>
+      </section>
+
+      <section class="screen" id="screen-surprise" data-screen="surprise" hidden>
+        <div class="card surprise-card" id="surpriseCard">
+          <p class="surprise-line" id="s1" hidden>Okay, now smile. 🤭🌷</p>
+          <p class="surprise-line" id="s2" hidden>
+            Because somewhere, someone is very fond of that smile of yours. 🫣🎀
+          </p>
+          <p class="surprise-line final" id="s3" hidden>
+            Have a beautiful, peaceful morning, Rasmalai. 🍮❤️
+          </p>
+          <div class="finale-bloom" id="finaleBloom" aria-hidden="true" hidden></div>
+
+          <div class="restart-panel" id="restartPanel" hidden>
+            <button class="btn soft restart-btn" type="button" id="restartBtn">
+              🔁 Wanna start again?
+            </button>
+          </div>
+
+          <div class="flirty-box" id="flirtyBox" hidden>
+            <p class="flirty-toast" id="flirtyToast"></p>
+            <button class="btn primary" type="button" id="confirmRestartBtn">
+              Yesss 🤭💗
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="burst" id="burst" aria-hidden="true"></div>
     <script src="script.js"></script>
   </body>
 </html>
