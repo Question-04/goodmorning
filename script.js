@@ -14,9 +14,9 @@ let musicOn = false;
 let surpriseTimers = [];
 
 const flirtyLines = [
-  "Hehe caught you pressing again… matlab pasand aa gaya na, my cutuu sa bachaa? 🫣🎀",
-  "Aww so you liked it, ahaaa? 🤭💗 My cutuu sa bachaa… one more soft morning? 🍮✨",
-  "Ufff bilkul… my cutuu sa bachaa wants one more round. Ready? 💗🌷",
+  "Hehe caught you pressing again… matlab pasand aa gaya na, my cutuu sa bachaa? 🫣💙",
+  "Aww so you liked this love morning too, ahaaa? 🤭💗 My cutuu sa bachaa… one more soft start? ✨",
+  "Ufff bilkul… my cutuu sa bachaa wants one more round of butterflies. Ready? 💗💙",
 ];
 
 function stopAmbient() {
@@ -93,7 +93,7 @@ document.querySelectorAll("#feelingChoices .choice").forEach((choice) => {
     feelingReply.hidden = false;
     feelingReply.textContent = choice.dataset.reply;
     toHealth.hidden = false;
-    celebrate(choice, ["💗", "🤍", "🍮"]);
+    celebrate(choice, ["💗", "💙", "✨"]);
   });
 });
 
@@ -112,7 +112,7 @@ function spawnLetterHearts() {
   const layer = document.querySelector(".letter-hearts");
   if (!layer || layer.dataset.ready) return;
   layer.dataset.ready = "1";
-  const bits = ["💗", "🤍", "🌷", "🌸", "🍮", "🎀"];
+  const bits = ["💗", "💙", "🤍", "🌷", "🌸", "✨"];
   for (let i = 0; i < 10; i += 1) {
     const el = document.createElement("span");
     el.className = "letter-heart";
@@ -159,8 +159,8 @@ function playSurprise() {
     window.setTimeout(() => {
       s3.hidden = false;
       bloom.hidden = false;
-      bloom.textContent = "🌷 🤍 🍮 🎀 💗";
-      celebrate(s3, ["🌷", "💗", "🍮", "🎀", "🤍"]);
+      bloom.textContent = "💙 💗 ✨ 🌷 🤍";
+      celebrate(s3, ["💙", "💗", "✨", "🌷", "🤍"]);
     }, 2800)
   );
   surpriseTimers.push(
@@ -175,7 +175,7 @@ function offerRestart() {
   restartPanel.hidden = true;
   flirtyToast.textContent = line;
   flirtyBox.hidden = false;
-  celebrate(flirtyBox, ["🤭", "💗", "🍮", "🎀"]);
+  celebrate(flirtyBox, ["🤭", "💗", "💙", "✨"]);
 }
 
 function doRestart() {
@@ -232,7 +232,7 @@ function decorate() {
     star.style.animationDelay = `${Math.random() * 3}s`;
     sparkles.appendChild(star);
   }
-  const glyphs = ["🌷", "💗", "☁️", "🤍", "🌸", "🍮"];
+  const glyphs = ["🌷", "💗", "💙", "🤍", "🌸", "✨"];
   for (let i = 0; i < 7; i += 1) {
     const f = document.createElement("span");
     f.className = "floater";

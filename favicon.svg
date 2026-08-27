@@ -1,12 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
-    <linearGradient id="p" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFB7C5"/>
-      <stop offset="100%" stop-color="#FF8FAB"/>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7EA8FF"/>
+      <stop offset="100%" stop-color="#FF8FB8"/>
     </linearGradient>
   </defs>
-  <ellipse cx="32" cy="22" rx="14" ry="18" fill="url(#p)"/>
-  <ellipse cx="22" cy="26" rx="10" ry="14" fill="#FFC2D1" transform="rotate(-25 22 26)"/>
-  <ellipse cx="42" cy="26" rx="10" ry="14" fill="#FFC2D1" transform="rotate(25 42 26)"/>
-  <path d="M32 36 C30 46 28 54 32 58 C36 54 34 46 32 36Z" fill="#7CB342"/>
+  <path d="M32 54 C18 42 10 32 10 22 C10 14 16 10 22 10 C26 10 30 12 32 16 C34 12 38 10 42 10 C48 10 54 14 54 22 C54 32 46 42 32 54Z" fill="url(#g)"/>
 </svg>
