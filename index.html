@@ -41,148 +41,153 @@
     </div>
 
     <header class="topbar">
-      <p class="app-name">💙 Rasmalai 💗</p>
-      <button class="music-toggle" type="button" id="musicToggle" aria-pressed="false" title="Soft music on/off">
+      <p class="brand">💙 Rasmalai 💗</p>
+      <button class="music-btn" type="button" id="musicToggle" aria-pressed="false" title="Soft music">
         <span class="music-icon">🔇</span>
-        <span class="music-label">soft music</span>
       </button>
     </header>
 
-    <main class="app" id="app">
-      <section class="screen is-active" id="screen-welcome" data-screen="welcome">
-        <div class="card welcome-card">
-          <div class="tulip-row" aria-hidden="true">💙 🌷 💗 ✨</div>
-          <p class="love-chip">a little love morning 🤍</p>
+    <main class="app">
+      <!-- 1 Welcome -->
+      <section class="screen is-active" id="screen-welcome">
+        <div class="card">
+          <p class="chip">good morning love edition ✨</p>
           <h1>Good Morninggg,<br /><span>Rasmalai</span> 💙💗</h1>
           <p class="lead">
-            Aaj ki morning thodi special hai…<br />
-            kyunki kal se meri duniya thodi aur sundar lag rahi hai. 🥺✨
+            Aaj ka morning sirf tumhare liye soft banaya hai…<br />
+            thoda love, thoda play, thoda magic. 🥺🤍
           </p>
-          <button class="btn primary" type="button" data-next="checkin">
-            ☀️ Tap when you wake up
+          <button class="btn" type="button" data-go="garden">
+            ☀️ Begin this morning
           </button>
         </div>
       </section>
 
-      <section class="screen" id="screen-checkin" data-screen="checkin" hidden>
+      <!-- 2 Wish Garden -->
+      <section class="screen" id="screen-garden" hidden>
         <div class="card">
-          <h2>First… how's my beautiful girl feeling today? 🥺💙</h2>
-          <div class="choice-grid" id="feelingChoices">
-            <button class="choice" type="button" data-reply="Aww that makes my heart soft… then keep this softness with you all day, Rasmalai. 💗">
-              🥰 Soft and happy
+          <h2>🌷 Plant three soft wishes for today</h2>
+          <p class="hint">Tap any petal — each one grows a little wish for you.</p>
+          <div class="wish-garden" id="wishGarden">
+            <button class="petal" type="button" data-wish="May your morning feel light and loved. ☁️💗">🌸 Softness</button>
+            <button class="petal" type="button" data-wish="May someone think of you every soft hour. 💙">🌼 Care</button>
+            <button class="petal" type="button" data-wish="May your smile come back easily today. 🤭✨">🌺 Smile</button>
+            <button class="petal" type="button" data-wish="May your heart feel safe and chosen. 🫶🏻">💮 Safety</button>
+            <button class="petal" type="button" data-wish="May today feel beautiful just because you’re in it. 🌷">🌻 Beauty</button>
+            <button class="petal" type="button" data-wish="May you remember: you are my favorite gift. 🎁💗">🌹 Gift</button>
+          </div>
+          <div class="wish-jar" id="wishJar" aria-live="polite">
+            <p class="jar-title">your wish jar</p>
+            <ul class="jar-list" id="jarList"></ul>
+            <p class="jar-count" id="jarCount">0 / 3 planted</p>
+          </div>
+          <button class="btn" type="button" data-go="moments" id="toMoments" hidden>
+            Soft moments →
+          </button>
+        </div>
+      </section>
+
+      <!-- 3 Soft Moments (flip cards) -->
+      <section class="screen" id="screen-moments" hidden>
+        <div class="card">
+          <h2>🫧 Soft little moments with me</h2>
+          <p class="hint">Tap a card to flip it — a tiny love activity waits inside.</p>
+          <div class="flip-grid" id="flipGrid">
+            <button class="flip-card" type="button" data-done="false">
+              <span class="face front">🪞 Mirror kindness</span>
+              <span class="face back">Look at yourself and whisper: “I’m lovely.” Because you are. 💗</span>
             </button>
-            <button class="choice" type="button" data-reply="Then take it slow, my love. Soft morning, soft heart, soft plans — all for you. ☁️💙">
-              😴 Still a little sleepy
+            <button class="flip-card" type="button" data-done="false">
+              <span class="face front">🌤️ Sky peek</span>
+              <span class="face back">Look at the sky once for me… and know I’m thinking of you under the same sky. ☁️💙</span>
             </button>
-            <button class="choice" type="button" data-reply="That's okay. Even soft hearts need soft mornings. I'm right here with you. 🤍">
-              🫠 Mind feels a little full
+            <button class="flip-card" type="button" data-done="false">
+              <span class="face front">🫧 Soft breath</span>
+              <span class="face back">One deep breath in… and out. That’s us sharing a calm second. 🤍</span>
             </button>
-            <button class="choice" type="button" data-reply="Thank you for telling me. You don't have to be perfect today — just be you. 🥺💗">
-              🥺 A little tender today
+            <button class="flip-card" type="button" data-done="false">
+              <span class="face front">🍓 Tiny treat</span>
+              <span class="face back">Eat or drink something cute for yourself. You deserve sweetness. 🍮✨</span>
             </button>
-            <button class="choice" type="button" data-reply="Then rest is allowed. Loving yourself today is also love. 🫶🏻💙">
-              ❤️ I just need softness
+            <button class="flip-card" type="button" data-done="false">
+              <span class="face front">💭 Us memory</span>
+              <span class="face back">Think of one moment with me that made you smile. Keep it close today. 🤭💗</span>
+            </button>
+            <button class="flip-card" type="button" data-done="false">
+              <span class="face front">💌 Heart tap</span>
+              <span class="face back">Place a hand on your heart. That’s where you matter to me the most. 🫶🏻💙</span>
             </button>
           </div>
-          <p class="soft-reply" id="feelingReply" hidden></p>
-          <button class="btn primary" type="button" data-next="health" id="toHealth" hidden>
-            Continue with love →
+          <p class="progress" id="momentProgress">0 / 4 opened</p>
+          <button class="btn" type="button" data-go="letter" id="toLetter" hidden>
+            Open the love letter →
           </button>
         </div>
       </section>
 
-      <section class="screen" id="screen-health" data-screen="health" hidden>
-        <div class="card">
-          <h2>🌸 Tiny care, from someone who adores you</h2>
-          <div class="health-grid" id="healthCards">
-            <button class="health-card" type="button" data-msg="Good… even one sip is love for your body 💧🤍">
-              <span class="hc-emoji">💧</span>
-              <span class="hc-text">Had a little water?</span>
-              <span class="hc-check" aria-hidden="true">✓</span>
-            </button>
-            <button class="health-card" type="button" data-msg="Please eat something sweet or warm — you deserve care 🍪💗">
-              <span class="hc-emoji">🍪</span>
-              <span class="hc-text">Eaten something gentle?</span>
-              <span class="hc-check" aria-hidden="true">✓</span>
-            </button>
-            <button class="health-card" type="button" data-msg="Your rest matters to me. Soft body, soft mind 😴💙">
-              <span class="hc-emoji">😴</span>
-              <span class="hc-text">Did you rest enough?</span>
-              <span class="hc-check" aria-hidden="true">✓</span>
-            </button>
-            <button class="health-card" type="button" data-msg="Whether lighter or not — you're still my favorite person today 🧘‍♀️🤍">
-              <span class="hc-emoji">🧘‍♀️</span>
-              <span class="hc-text">Heart feeling a bit lighter?</span>
-              <span class="hc-check" aria-hidden="true">✓</span>
-            </button>
-            <button class="health-card" type="button" data-msg="Taking it easy is beautiful. I'm proud of you 🌷🫶🏻">
-              <span class="hc-emoji">🌷</span>
-              <span class="hc-text">Being gentle with yourself?</span>
-              <span class="hc-check" aria-hidden="true">✓</span>
-            </button>
-          </div>
-          <p class="nudge" id="healthNudge" hidden></p>
-          <p class="footer-note">
-            You don't have to finish all of these…<br />
-            I just want my girl to feel cared for. 🫶🏻💙
-          </p>
-          <button class="btn primary" type="button" data-next="letter">
-            Open my love note →
+      <!-- 4 Envelope Letter -->
+      <section class="screen" id="screen-letter" hidden>
+        <div class="letter-stage">
+          <button class="envelope" type="button" id="envelopeBtn" aria-expanded="false">
+            <span class="env-stamp">💙</span>
+            <span class="env-seal">♡</span>
+            <span class="env-title">for my Rasmalai</span>
+            <span class="env-hint">tap to open your letter</span>
           </button>
-        </div>
-      </section>
 
-      <section class="screen" id="screen-letter" data-screen="letter" hidden>
-        <div class="letter-wrap">
-          <div class="letter-hearts" aria-hidden="true"></div>
-          <article class="letter-card">
-            <p class="letter-kicker">💌 For you, Rasmalai 💙💗</p>
-            <div class="letter-body">
+          <article class="love-letter" id="loveLetter" hidden>
+            <p class="ll-kicker">💌 a morning letter, just for you</p>
+            <h2 class="ll-name">My beautiful Rasmalai,</h2>
+            <div class="ll-body">
               <p>
-                Kal se mera dil thoda alag beat kar raha hai… kyunki tumne kaha tum mujhe like karne lagi ho. Aur usne meri morning ko already beautiful bana diya. 🥺✨
+                Kal se mera dil thoda differently beat kar raha hai… kyunki tumne kaha tum mujhe like karne lagi ho. Usne meri duniya soft aur bright dono bana di. 🥺✨
               </p>
               <p>
-                Tum mere liye bahut important ho. Tumhari smile, tumhari baatein, tumhara hona — sab kuch mera softest place feel hota hai.
+                Tum mere liye bahut important ho. Tumhari smile, tumhari baatein, tumhara hona — sab mera favourite place feel hota hai.
               </p>
               <p>
-                Tum itni beautiful ho… andar se aur bahar se. Aur haan — tum meri bestest gift ho. The kind of gift I didn't know I was waiting for. 🎁💗
+                Tum itni beautiful ho — andar se aur bahar se. Aur haan, tum meri <em>bestest gift</em> ho. The gift I didn’t even know I was waiting for. 🎁💗
               </p>
               <p>
-                Thank you for choosing softness with me. Thank you for liking me. Thank you for being you.
+                Thank you for liking me. Thank you for softness. Thank you for being you.
               </p>
-              <p class="letter-end">
-                Aaj sirf itna yaad rakhna — you matter so much to me. 🤍💙
-              </p>
+              <p class="ll-end">Aaj sirf itna yaad rakhna — you matter so much to me. 🤍💙</p>
             </div>
+            <button class="btn" type="button" data-go="constellation">
+              ✨ One last sky →
+            </button>
           </article>
-          <button class="btn primary" type="button" data-next="surprise">
-            💗 One soft surprise…
-          </button>
         </div>
       </section>
 
-      <section class="screen" id="screen-surprise" data-screen="surprise" hidden>
-        <div class="card surprise-card" id="surpriseCard">
-          <p class="surprise-line" id="s1" hidden>Okay… now smile for me. 🤭💙</p>
-          <p class="surprise-line" id="s2" hidden>
-            Because the girl who started liking me yesterday is also the girl who made my world prettier. 🫣💗
-          </p>
-          <p class="surprise-line final" id="s3" hidden>
-            Have the softest, loveliest morning, my beautiful Rasmalai. 💙❤️
-          </p>
-          <div class="finale-bloom" id="finaleBloom" aria-hidden="true" hidden></div>
-
-          <div class="restart-panel" id="restartPanel" hidden>
-            <button class="btn soft restart-btn" type="button" id="restartBtn">
+      <!-- 5 Constellation finale -->
+      <section class="screen" id="screen-constellation" hidden>
+        <div class="card sky-card">
+          <h2>🌌 Light our little sky</h2>
+          <p class="hint">Tap the hearts to light them up.</p>
+          <div class="constellation" id="constellation">
+            <button class="star-heart" type="button" aria-label="Light a heart">💗</button>
+            <button class="star-heart" type="button" aria-label="Light a heart">💙</button>
+            <button class="star-heart" type="button" aria-label="Light a heart">✨</button>
+            <button class="star-heart" type="button" aria-label="Light a heart">🤍</button>
+            <button class="star-heart" type="button" aria-label="Light a heart">🌷</button>
+          </div>
+          <div class="finale" id="finale" hidden>
+            <p class="finale-line">Okay… now smile for me. 🤭</p>
+            <p class="finale-line">
+              Because the girl who started liking me yesterday made my whole world prettier. 🫣💗
+            </p>
+            <p class="finale-final">
+              Have the softest Good Morning, my beautiful Rasmalai. 💙❤️
+            </p>
+            <div class="finale-bloom" aria-hidden="true">💙 💗 ✨ 🌷 🤍</div>
+            <button class="btn soft" type="button" id="restartBtn">
               🔁 Wanna start again?
             </button>
-          </div>
-
-          <div class="flirty-box" id="flirtyBox" hidden>
-            <p class="flirty-toast" id="flirtyToast"></p>
-            <button class="btn primary" type="button" id="confirmRestartBtn">
-              Yesss 🤭💗
-            </button>
+            <div class="flirty" id="flirtyBox" hidden>
+              <p id="flirtyToast"></p>
+              <button class="btn" type="button" id="confirmRestartBtn">Yesss 🤭💗</button>
+            </div>
           </div>
         </div>
       </section>
