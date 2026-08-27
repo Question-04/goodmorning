@@ -24,7 +24,7 @@ const litStars = new Set();
 
 const flirtyLines = [
   "Hehe caught you pressing again… matlab pasand aa gaya na, my cutuu sa bachaa? 🫣💙",
-  "Aww so you liked this love morning too, ahaaa? 🤭💗 My cutuu sa bachaa… one more soft start? ✨",
+  "Aww so you liked this love morning too, ahaaa? 🤭💗 My cutuu sa bachaa… one more round? ✨",
   "Ufff bilkul… my cutuu sa bachaa wants one more round of butterflies. Ready? 💗💙",
 ];
 
